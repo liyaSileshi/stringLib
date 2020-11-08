@@ -27,18 +27,50 @@ function removeExtraSpaces(str) {
   let trimmedStrings = strings.filter((str) => {
     return str !== ''
   })
-
   return trimmedStrings.join(' ') //return the joined string
 }
 
+function kabobCase(str) {
+  str = str.toLowerCase()
+  str.trim() //removes white space from beginning and ending
+  const strings = str.split(' ') //array of strings from str
+  let trimmedStrings = strings.filter((str) => {
+    return str !== ''
+  })
+  return trimmedStrings.join('-') //return the joined string
+}
 
-// kabobCase()
+function snakeCase(str) {
+  str = str.toLowerCase()
+  str.trim() //removes white space from beginning and ending
+  const strings = str.split(' ') //array of strings from str
+  let trimmedStrings = strings.filter((str) => {
+    return str !== ''
+  })
+  return trimmedStrings.join('_') //return the joined string
+}
 
-// snakeCase()
+function camelCase(str) {
+  // lowercase the first character of the word
+  str.trim() //remove white spaces from ends
+  let first = str[0].toLowerCase() //lowercase the first ch
+  str = first + str.slice(1) //connect with the rest of str
+  
+  str = removeExtraSpaces(str) //remove any extra spaces
+  const strings = str.split(' ') //array of string
 
-// camelCase()
+  let rest = strings.slice(1)
+   //capitalize first letter of each word
+  let capitalized = rest.map((str) => {
+    return capitalize(str)
+  })
+  let restWords = capitalized.join('')
+  let result = strings[0] + restWords
+  return result
+}
+
+
+
 
 // shift()
-
-
 

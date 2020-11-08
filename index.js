@@ -1,8 +1,9 @@
 
 // Capitalize the first letter
-function capitalize(str) {
-  let first = str[0].toUpperCase()
-  return first + str.slice(1)
+String.prototype.capitalize = function() {
+
+  let first = this[0].toUpperCase()
+  return first + this.slice(1)
 }
 
 // Capitalize all letters

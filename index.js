@@ -69,8 +69,15 @@ function camelCase(str) {
   return result
 }
 
-
-
-
-// shift()
-
+/*
+this method will take the first character of a 
+string and move to the end of a string:
+*/
+function shift(str, num=1) {
+  for (let i = 1; i <= num; ++i) {
+    let first = str[0]
+    let rest = str.slice(1)
+    str = rest + first
+  }
+  return str
+}

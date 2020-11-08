@@ -1,18 +1,34 @@
 
-// Capitalize the first letter
+/**
+   * Returns the string with first letter capitalized
+   *
+   * @return {string} The first letter capitalized
+   * @since 2.0.0
+   */
 String.prototype.capitalize = function() {
   let first = this[0].toUpperCase()
   return first + this.slice(1)
 }
 
-// Capitalize all letters
+
+/**
+   * Returns the string with all letters capitalized
+   *
+   * @return {string} All letters capitalized
+   * @since 2.0.0
+   */
 String.prototype.allcaps = function() {
   return this.toUpperCase()
 }
 console.log('hello'.allcaps())
 
 
-// Capitalize the first letter of each word
+/**
+   * Returns the string with first letter of each word capitalized
+   *
+   * @return {string} The first letter of each word capitalized
+   * @since 2.0.0
+   */
 String.prototype.capitalizeWords = function() {
   //split the string on white space
   let words = this.split(' ')
@@ -23,6 +39,12 @@ String.prototype.capitalizeWords = function() {
 }
 console.log('my name is liya'.capitalizeWords())
 
+/**
+   * Returns the string with all extra spaces removed
+   *
+   * @return {string} all extra spaces removed
+   * @since 2.0.0
+   */
 String.prototype.removeExtraSpaces = function() {
   this.trim() //removes white space from beginning and ending
   const strings = this.split(' ') //array of strings from str
@@ -33,6 +55,12 @@ String.prototype.removeExtraSpaces = function() {
 }
 console.log('  ef  my name   is liya'.removeExtraSpaces())
 
+/**
+   * Returns the string with removed extra spaces and replaces spaces with the hyphen "-", and makes all character lowercase
+   *
+   * @return {string} removed extra spaces and replaces spaces with the hyphen "-", and makes all character lowercase
+   * @since 2.0.0
+   */
 String.prototype.kabobCase = function() {
   let tokens = cleanString(this)
   return tokens.join('-') //return the joined string
@@ -40,12 +68,24 @@ String.prototype.kabobCase = function() {
 console.log('  ef  my name   is liya'.kabobCase())
 
 
+/**
+   * Returns the string with removed extra spaces and replaces spaces with the underscore "_", and makes all character lowercase
+   *
+   * @return {string} removed extra spaces and replaces spaces with the underscore "_", and makes all character lowercase
+   * @since 2.0.0
+   */
 String.prototype.snakeCase = function() {
   let tokens = cleanString(this)
   return tokens.join('_') //return the joined string
 }
 console.log('  ef  my name   is liya'.snakeCase())
 
+/**
+   * Lowercases the first character of the first word. Then uppercases the first character of all other words, and removes all spaces.
+   *
+   * @return {string} Lowercases the first character of the first word. Then uppercases the first character of all other words, and removes all spaces.
+   * @since 2.0.0
+   */
 String.prototype.camelCase = function() {
   // lowercase the first character of the word
   this.trim() //remove white spaces from ends
@@ -70,6 +110,13 @@ console.log('  ef  my name   is liya'.camelCase())
 this method will take the first character of a 
 string and move to the end of a string:
 */
+/**
+   * this method will take the first character of a string and move to the end of a string:
+   *
+   * @return {string} this method will take the first character of a string and move to the end of a string:
+   * @param {number} num The desired number of characters to shift
+   * @since 2.0.0
+   */
 String.prototype.shift = function(num=1) {
   let str = this
   for (let i = 1; i <= num; ++i) {

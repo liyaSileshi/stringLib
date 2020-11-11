@@ -1,10 +1,10 @@
 {
   "name": "@lstilahun/stringlib",
-  "version": "2.0.0",
+  "version": "3.0.2",
   "description": "string library",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -12,5 +12,8 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/liyaSileshi/stringLib.git#readme"
+  "homepage": "https://github.com/liyaSileshi/stringLib.git#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
 }

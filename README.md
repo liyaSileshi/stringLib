@@ -5,6 +5,10 @@ javascript string library
 
 ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@lstilahun/stringlib)
 
+[![Coverage Status](https://coveralls.io/repos/github/liyaSileshi/stringLib/badge.svg?branch=main)](https://coveralls.io/github/liyaSileshi/stringLib?branch=main)
+
+[![Build Status](https://travis-ci.com/liyaSileshi/stringLib.svg?branch=main)](https://travis-ci.com/liyaSileshi/stringLib)
+
 ## String Prototype extension:
 
 1. ```.capitalize()```
